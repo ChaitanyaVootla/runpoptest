@@ -30,6 +30,26 @@ pipelines:
         execution:
           onExecute:
             - echo "asd"
+  - name: TRIGGER_IN_1
+    steps:
+      - name: TRIGGER_IN
+        type: Bash
+        configuration:
+          outputResources:
+            - name: runpoppropin
+        execution:
+          onExecute:
+            - echo "asd"
+  - name: TRIGGER_1
+    steps:
+      - name: TRIGGER_IN
+        type: Bash
+        configuration:
+          outputResources:
+            - name: runpopprop
+        execution:
+          onExecute:
+            - echo "asd"
   - name: TRIGGER
     steps:
       - name: TRIGGER
