@@ -4,6 +4,11 @@ resources:
     configuration:
       key1: value1
       key2: value2
+  - name: runpoppropin
+    type: PropertyBag
+    configuration:
+      key1: value1
+      key2: value2
   - name: runpopprop2
     type: PropertyBag
     configuration:
@@ -15,6 +20,16 @@ resources:
       key1: value1
       key2: value2
 pipelines: 
+  - name: TRIGGER_IN
+    steps:
+      - name: TRIGGER_IN
+        type: Bash
+        configuration:
+          outputResources:
+            - name: runpoppropin
+        execution:
+          onExecute:
+            - echo "asd"
   - name: TRIGGER
     steps:
       - name: TRIGGER
@@ -22,6 +37,8 @@ pipelines:
         configuration:
           outputResources:
             - name: runpopprop
+          inputResources:
+            - name: runpoppropin
         execution:
           onExecute:
             - write_output runpopprop runId=$run_number
