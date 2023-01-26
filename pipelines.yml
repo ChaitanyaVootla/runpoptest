@@ -35,6 +35,7 @@ pipelines:
         execution:
           onExecute:
             - echo "asd"
+            - write_output runpoppropin1 runNumber=${run_number}
   - name: TRIGGER_IN
     steps:
       - name: TRIGGER_IN
@@ -47,6 +48,7 @@ pipelines:
         execution:
           onExecute:
             - echo "asd"
+            - write_output runpoppropin1 runNumber=${run_number}
   - name: TRIGGER_IN_1
     steps:
       - name: TRIGGER_IN
@@ -91,6 +93,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
+            - write_output runpopprop3 runNumber=${run_number}
   - name: TRIGGER_OUT_3_3
     steps:
       - name: TRIGGER_OUT_1
@@ -141,6 +144,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
+            - write_output runpopprop2 runNumber=${run_number}
   - name: TRIGGER_OUT_3_1
     steps:
       - name: TRIGGER_OUT_2
