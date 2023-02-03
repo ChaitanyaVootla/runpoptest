@@ -154,7 +154,7 @@ pipelines:
           onExecute:
             - printenv
             - write_output runpopprop2 runNumber=${run_number}
-            - set_run_name "V${run_number}.0.0"
+            - set_run_name "V${run_number}.0.0.longtestlongtestlongtestlongtest"
   - name: TRIGGER_OUT_3_1
     steps:
       - name: TRIGGER_OUT_2
