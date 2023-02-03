@@ -111,7 +111,7 @@ pipelines:
           onExecute:
             - printenv
             - set_run_name "V${run_number}.0.0"
-  - name: TRIGGER_OUT_1_2
+  - name: TRIGGER_OUT_1_2_LONG_NAME_TEST_LONG_NAME_TEST_LONG_NAME
     steps:
       - name: TRIGGER_OUT_2
         type: Bash
@@ -139,7 +139,7 @@ pipelines:
           onExecute:
             - printenv
             - set_run_name "V${run_number}.0.0"
-  - name: TRIGGER_OUT_1_4
+  - name: TRIGGER_OUT_1_4_LONG_NAME_TEST_LONG_NAME_TEST_LONG_NAME
     steps:
       - name: TRIGGER_OUT_2
         type: Bash
