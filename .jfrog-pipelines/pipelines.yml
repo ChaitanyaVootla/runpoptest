@@ -139,6 +139,19 @@ pipelines:
           onExecute:
             - printenv
             - set_run_name "V${run_number}.0.0"
+  - name: TRIGGER_OUT_1_5
+    steps:
+      - name: TRIGGER_OUT_1_5
+        type: Bash
+        configuration:
+          inputResources:
+            - name: runpopprop
+          environmentVariables:
+            SOME_KEY: 'asd'
+        execution:
+          onExecute:
+            - printenv
+            - set_run_name "V${run_number}.0.0"
   - name: TRIGGER_OUT_1_4_LONG_NAME_TEST_LONG_NAME_TEST_LONG_NAME
     steps:
       - name: TRIGGER_OUT_2
