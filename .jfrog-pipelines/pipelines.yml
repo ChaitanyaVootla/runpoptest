@@ -193,7 +193,7 @@ pipelines:
             SOME_KEY: 'asd'
         execution:
           onExecute:
-            - printenv
+            - echo "demo"
             - set_run_name "V${run_number}.0.0"
 
 
