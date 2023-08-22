@@ -137,7 +137,7 @@ pipelines:
             SOME_KEY: 'asd'
         execution:
           onExecute:
-            - printenv
+            - echo "{{gitBranch}}"
             - set_run_name "V${run_number}.0.0"
   - name: TRIGGER_OUT_1_5
     steps:
