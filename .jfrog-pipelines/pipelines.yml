@@ -195,7 +195,7 @@ pipelines:
           onExecute:
             - echo "demo"
             - set_run_name "V${run_number}.0.0"
-            - echo "demo"
+            - echo "demo2"
 
 
 
